@@ -13,9 +13,11 @@ function CreateBoard(){
 };
 
 function ResetBoard(){
-  let cell = document.querySelectorAll('.cell');
-  cell.style.cssText = 'background-color: black';
-};
+    
+    let reset = document.querySelectorAll(".cell");
+    reset.forEach(cell => cell.remove())
+    CreateBoard();
+}
 
 reset.addEventListener('click',ResetBoard)
 
